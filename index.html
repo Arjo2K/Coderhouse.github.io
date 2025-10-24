@@ -24,9 +24,9 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="#">
+                <a class="navbar-brand d-flex align-items-center" href="/index.html">
                     <img src="imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="rounded-circle border border-black me-2" width="60"
-                        height="50">
+                        height="50" id="logo">
                     <span class="d-none d-sm-block">Schmeckt Gut</span>
                 </a>
 
@@ -44,7 +44,7 @@
                             <a class="nav-link" href="pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/info.html">Acerca de</a>
+                            <a class="nav-link" href="pages/info.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="pages/cervezas.html">Cervezas</a>
@@ -56,14 +56,22 @@
     </header>
 
     <main class="flex-grow-1">  
+        <section class="hero-banner">
+             <div class="overlay"></div>
+                <div class="content">
+                    <h1>HECHAS A MANO, PENSADAS PARA VOS</h1>
+                            <p>Bienvenido al lado libre de la cerveza. Acá no hay fórmulas ni producción en masa: solo pasión, fuego y maltas reales. Cada birra nace de la rebeldía y se sirve con actitud.</p>
+                                <div class="buttons">
+                                  <a href="#" class="button primary">COMPRAR AHORA</a>
+                                  <a href="#" class="button whatsapp">WHATSAPP</a>
+                                </div>
+                </div>
+        </section>
         <!-- Sección de imagen -->
         <section class="container my-4">
             <div class="d-flex flex-column align-items-center">
-                <img src="imagenes/cerveza-casera-3.jpg" class="rounded mb-2 img-fluid" alt="Proceso de elaboración y cervezas terminadas" loading="lazy">
-                <p class="text-center w-50">
-                    Proceso de elaboración y cervezas terminadas
-                </p>
-            </div>
+                <video src="imagenes/video-cerveza.mp4" class="rounded mb-2" controls alt="Degustación de cervezas" loading="lazy">
+                </div>
         </section>
 
         <!-- Sección de mapa -->

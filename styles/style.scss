@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+$primary-color: #f7931e;
+$secondary-color: #ffffff;
+$text-color: #ffffff;
+$dark-overlay: rgba(0, 0, 0, 0.5);
 body {
     background-color: #343a40;
     color: #f8f9fa;
@@ -38,3 +42,113 @@ body {
         justify-content: center;
     }
 }
+#div-sec-principal {
+    background-image: url(/imagenes/WhatsApp\ Image\ 2025-10-23\ at\ 00.57.19.jpeg);
+}
+
+// Pruebas //
+
+.wrapper {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  margin: 50px 0;
+  
+  display: flex;
+  flex-direction: row;
+  
+  transition: all 200ms ease-in-out;
+}
+
+.image-wrapper {
+  height: 300px;
+  width: 450px;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: all 200ms ease-in-out;
+}
+
+#img-wrap {
+  height: 300px;
+  width: 450px;
+  object-fit: cover;
+  object-position: top;
+  
+  transition: all 200ms ease-in-out;
+}
+
+.book-design-image {
+  object-position: center;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: 380px;
+  transition: all 200ms ease-in-out;
+  overflow: hidden;
+  
+}
+
+h1 {
+  position: relative;
+  bottom: 0;
+  height: 300px;
+  color: #fff;
+  font-size: 80px;
+  font-family: Oswald;
+  text-transform: uppercase;
+  
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper:hover img {
+  transform: scale(2);
+  /*object-position: bottom;*/
+}
+
+.wrapper:hover h1 {
+  bottom: 300px;
+  transform: scale(.4);
+}
+
+.wrapper:hover .image-wrapper {
+  width: 800px;
+} 
+
+
+// Pruebas 2// 
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: {
+    image: url(/imagenes/WhatsApp\ Image\ 2025-10-23\ at\ 00.57.19.jpeg);
+    size: cover;
+    position: center;
+  }
+}
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-overlay;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    color: $text-color;
+  }
