@@ -25,7 +25,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="/index.html">
-                    <img src="imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="rounded-circle border border-black me-2" width="60"
+                    <img src="/imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="rounded-circle border border-black me-2" width="60"
                         height="50">
                     <span class="d-none d-sm-block">Schmeckt Gut</span>
                 </a>
@@ -55,37 +55,39 @@
         </nav>
     </header>
 
-    <main class="flex-grow-1">  
-        <!-- Sección de imagen -->
-        <section class="container my-4">
-            <div class="d-flex flex-column align-items-center">
-                <img src="imagenes/cerveza-casera-3.jpg" class="rounded mb-2 img-fluid" alt="Proceso de elaboración y cervezas terminadas" loading="lazy">
-                <p class="text-center w-50">
-                    Proceso de elaboración y cervezas terminadas
-                </p>
+    <main class="flex-grow-1 hero-banner">  
+        <!-- Sección Formulario -->
+        <section>
+            <h2>Si queres contactarte con nosotros podes enviarnos tu información aquí abajo</h2>
+            <div class="form-floating mb-3">
+                <input type="name" class="form-control" id="name-input" placeholder="Nombre">
+                <label for="name-input">Nombre</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="Email" class="form-control" id="email-input" placeholder="Email">
+                <label for="email-input">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="number-input" placeholder="Número de teléfono">
+                <label for="number-input">Numero</label>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" id="comment-input" style="height: 100px"></textarea>
+                <label for="comment-input">Mensaje(Opcional)</label>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary m-2" type="submit">Enviar</button>
             </div>
         </section>
-
-        <!-- Sección de mapa -->
-        <section class="container my-4 col-md-8 offset-md-2">
-            <h4 class="mb-3 text-start">Aquí tenes el mapa por si queres ubicarnos</h4>
-            <div class="ratio ratio-16x9">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d64816.18665504056!2d-65.05354!3d-31.950210000000002!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDU3JzAwLjgiUyA2NcKwMDMnMTIuNyJX!5e1!3m2!1ses-419!2sar!4v1759702916163!5m2!1ses-419!2sar"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación de Schmeckt Gut en Google Maps">
-                </iframe>
-            </div>
-        </section>
+        
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="bg-white text-dark py-3 mt-5">
+    <footer class="bg-white text-dark py-3">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <!-- Logo footer -->
             <div class="d-flex align-items-center mb-3 mb-md-0">
-                <img src="imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="mr-2 rounded-circle" width="100" height="85">
+                <img src="/imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="mr-2 rounded-circle" width="100" height="85">
                 <span class="ms-3 fs-5 fw-bold">Schmeckt Gut</span>
             </div>
 
@@ -97,9 +99,9 @@
             <!-- Redes sociales -->
             <div>
                 <ul class="list-unstyled d-flex gap-3 mb-0">
-                    <li><a href="#" class="text-dark text-decoration-none">Instagram</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">Facebook</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">Whatsapp</a></li>
+                    <li><a href="https://instagram.com/" class="text-dark text-decoration-none">Instagram</a></li>
+                    <li><a href="https://facebook.com/" class="text-dark text-decoration-none">Facebook</a></li>
+                    <li><a href="https://whatsapp.com/" class="text-dark text-decoration-none">Whatsapp</a></li>
                 </ul>
             </div>
         </div>

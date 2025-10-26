@@ -38,10 +38,6 @@ body {
     justify-content: center;
   }
 }
-#div-sec-principal {
-  background-image: url(/imagenes/WhatsApp\ Image\ 2025-10-23\ at\ 00.57.19.jpeg);
-}
-
 .wrapper {
   position: relative;
   height: 300px;
@@ -135,6 +131,18 @@ h1 {
   position: relative;
   z-index: 1;
   color: #ffffff;
+}
+
+/* Ocultar flechas en Chrome, Safari, Edge y Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Ocultar flechas en Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /*# sourceMappingURL=style.css.map */
