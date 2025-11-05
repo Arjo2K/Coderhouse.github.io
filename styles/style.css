@@ -91,6 +91,10 @@ h1 {
   transition: all 200ms ease-in-out;
 }
 
+.card-title {
+  text-transform: capitalize;
+}
+
 .wrapper:hover img {
   transform: scale(2);
   /*object-position: bottom;*/
@@ -113,7 +117,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(/imagenes/WhatsApp\ Image\ 2025-10-23\ at\ 00.57.19.jpeg);
+  background-image: url(/imagenes/Fondo\ vaso\ schmechkt.jpeg);
   background-size: cover;
   background-position: center;
 }
