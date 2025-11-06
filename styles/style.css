@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 body {
   background-color: #343a40;
   color: #f8f9fa;
@@ -9,8 +10,7 @@ body {
 .navbar {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
-
-.navbar-brand span {
+.navbar .navbar-brand span {
   font-weight: bold;
 }
 
@@ -21,94 +21,72 @@ body {
 }
 
 /* Footer */
-.footer-logo {
+.footer .footer-logo {
   margin-right: 1rem;
 }
-
 .footer a {
   transition: color 0.3s ease-in-out;
 }
-
 .footer a:hover {
   color: #6c757d !important;
 }
-
 @media (max-width: 767.98px) {
   .footer .list-unstyled {
     justify-content: center;
   }
 }
+
+/* ----- Hover Card Effect ----- */
 .wrapper {
   position: relative;
   height: 300px;
   width: 600px;
   margin: 50px 0;
   display: flex;
-  flex-direction: row;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease;
 }
-
-.image-wrapper {
-  height: 300px;
+.wrapper .image-wrapper {
   width: 450px;
+  height: 100%;
   overflow: hidden;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 200ms ease-in-out;
+  transition: inherit;
 }
-
-#img-wrap {
-  height: 300px;
-  width: 450px;
+.wrapper .image-wrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: top;
-  transition: all 200ms ease-in-out;
+  transition: inherit;
 }
-
-.book-design-image {
-  object-position: center;
-}
-
-.header-wrapper {
+.wrapper .header-wrapper {
+  position: absolute;
+  left: 380px;
+  height: 100%;
+  width: 300px;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  left: 380px;
-  transition: all 200ms ease-in-out;
   overflow: hidden;
+  transition: inherit;
 }
-
-h1 {
-  position: relative;
-  bottom: 0;
-  height: 300px;
+.wrapper .header-wrapper h1 {
   color: #fff;
   font-size: 80px;
-  font-family: Oswald;
   text-transform: uppercase;
-  transition: all 200ms ease-in-out;
+  transition: inherit;
 }
-
-.card-title {
-  text-transform: capitalize;
+.wrapper:hover .image-wrapper {
+  width: 800px;
 }
-
 .wrapper:hover img {
   transform: scale(2);
-  /*object-position: bottom;*/
 }
-
 .wrapper:hover h1 {
   bottom: 300px;
   transform: scale(0.4);
 }
 
-.wrapper:hover .image-wrapper {
-  width: 800px;
-}
-
+/* ----- Hero Banner ----- */
 .hero-banner {
   position: relative;
   width: 100%;
@@ -117,36 +95,28 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(/imagenes/Fondo\ vaso\ schmechkt.jpeg);
+  background-image: url("/imagenes/Fondo vaso schmechkt.jpeg");
   background-size: cover;
   background-position: center;
 }
-
-.overlay {
+.hero-banner .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-.content {
+.hero-banner .content {
   position: relative;
   z-index: 1;
   color: #ffffff;
 }
 
-/* Ocultar flechas en Chrome, Safari, Edge y Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Ocultar flechas en Firefox */
+/* Inputs sin flechas numéricas */
 input[type=number] {
   -moz-appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
