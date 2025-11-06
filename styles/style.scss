@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 $primary-color: #f7931e;
-$secondary-color: #ffffff;
 $text-color: #ffffff;
 $background-color: #343a40;
 $dark-overlay: rgba(0, 0, 0, 0.5);
@@ -12,7 +11,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 .navbar {
   background-color: rgba(0, 0, 0, 0.5) !important;
 
@@ -21,35 +20,22 @@ body {
   }
 }
 
-/* Contenido principal */
-.main-image {
-  max-width: 50%;
-  height: auto;
-}
-
-/* Footer */
+/* ===== Footer ===== */
 .footer {
-  .footer-logo {
-    margin-right: 1rem;
-  }
+  .footer-logo { margin-right: 1rem; }
 
   a {
     transition: color 0.3s ease-in-out;
 
-    &:hover {
-      color: #6c757d !important;
-    }
+    &:hover { color: #6c757d !important; }
   }
 
   @media (max-width: 767.98px) {
-    .list-unstyled {
-      justify-content: center;
-    }
+    .list-unstyled { justify-content: center; }
   }
 }
 
-/* ----- Hover Card Effect ----- */
-
+/* ===== Card Effect ===== */
 .wrapper {
   position: relative;
   height: 300px;
@@ -78,14 +64,13 @@ body {
     position: absolute;
     left: 380px;
     height: 100%;
-    width: 300px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     transition: inherit;
 
     h1 {
-      color: #fff;
+      color: $text-color;
       font-size: 80px;
       text-transform: uppercase;
       transition: inherit;
@@ -93,53 +78,132 @@ body {
   }
 
   &:hover {
-    .image-wrapper {
-      width: 800px;
-    }
-
-    img {
-      transform: scale(2);
-    }
-
-    h1 {
-      bottom: 300px;
-      transform: scale(0.4);
-    }
+    .image-wrapper { width: 800px; }
+    img { transform: scale(2); }
+    h1 { transform: scale(0.4); }
   }
 }
 
-/* ----- Hero Banner ----- */
+/* ===== Schmeckt Banner ===== */
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 1.5rem;
   text-align: center;
-  background-image: url("/imagenes/Fondo vaso schmechkt.jpeg");
-  background-size: cover;
-  background-position: center;
+  background: url("../imagenes/Fondo-vaso-schmechkt.jpeg") center/cover no-repeat;
 
   .overlay {
     position: absolute;
     inset: 0;
-    background-color: $dark-overlay;
+    background-color: rgba(0, 0, 0, 0.55);
   }
 
   .content {
     position: relative;
     z-index: 1;
-    color: $text-color;
+    max-width: 550px;
+    padding: 1.8rem 1.4rem;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  }
+
+  .buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    padding: .8rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+
+    &.primary { background: #ffc107; color: #000; }
+    &.whatsapp { background: #25D366; color: #fff; }
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 1.7rem; line-height: 1.2; }
+    p { font-size: .95rem; }
   }
 }
 
-/* Inputs sin flechas numéricas */
+/* ===== Video ===== */
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .video-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: $dark-overlay;
+  }
+
+  .video-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: $text-color;
+    animation: fadeIn 1.4s ease-out forwards;
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    p { margin: 10px 0 20px; }
+
+    .btn-video {
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: 30px;
+      background: $primary-color;
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover { background: rgba($primary-color, 0.85); }
+    }
+  }
+}
+
+/* ===== Animaciones ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Inputs sin flechas ===== */
 input[type="number"] {
   -moz-appearance: textfield;
 
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }

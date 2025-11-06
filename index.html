@@ -67,12 +67,30 @@
                                 </div>
                 </div>
         </section>
-        <!-- Sección de imagen -->
-        <section class="container my-4">
-            <div class="d-flex flex-column align-items-center">
-                <video src="imagenes/video-cerveza.mp4" class="rounded mb-2" controls alt="Degustación de cervezas" loading="lazy">
+        <!-- Sección de video -->
+        <!-- <section class="container my-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <video 
+                        class="rounded mb-2 w-100"
+                        src="imagenes/video-cerveza.mp4"
+                        controls
+                        preload="metadata"
+                        aria-label="Degustación de cerveza artesanal">
+                    </video>
                 </div>
+            </div>
+        </section> -->
+        <section class="video-hero">
+            <video class="video-bg" src="imagenes/video-cerveza.mp4" autoplay muted loop playsinline></video>                
+            <div class="video-overlay"></div>
+            <div class="video-content">
+                <h2>Cerveza artesanal con identidad</h2>
+                <p>Hecha con fuego, pasión y rebeldía.</p>
+                <a href="https://wa.me/549" class="btn-video">HACÉ TU PEDIDO</a>
+            </div>
         </section>
+
 
         <!-- Sección de mapa -->
         <section class="container my-4 col-md-8 offset-md-2">
