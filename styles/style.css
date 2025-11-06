@@ -1,42 +1,210 @@
-@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 body {
   background-color: #343a40;
   color: #f8f9fa;
   font-family: "Lato", sans-serif;
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 .navbar {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
-
-.navbar-brand span {
+.navbar .navbar-brand span {
   font-weight: bold;
 }
 
-/* Contenido principal */
-.main-image {
-  max-width: 50%;
-  height: auto;
-}
-
-/* Footer */
-.footer-logo {
+/* ===== Footer ===== */
+.footer .footer-logo {
   margin-right: 1rem;
 }
-
 .footer a {
   transition: color 0.3s ease-in-out;
 }
-
 .footer a:hover {
   color: #6c757d !important;
 }
-
 @media (max-width: 767.98px) {
   .footer .list-unstyled {
     justify-content: center;
   }
+}
+
+/* ===== Card Effect ===== */
+.wrapper {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  margin: 50px 0;
+  display: flex;
+  transition: all 200ms ease;
+}
+.wrapper .image-wrapper {
+  width: 450px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: inherit;
+}
+.wrapper .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: inherit;
+}
+.wrapper .header-wrapper {
+  position: absolute;
+  left: 380px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: inherit;
+}
+.wrapper .header-wrapper h1 {
+  color: #ffffff;
+  font-size: 80px;
+  text-transform: uppercase;
+  transition: inherit;
+}
+.wrapper:hover .image-wrapper {
+  width: 800px;
+}
+.wrapper:hover img {
+  transform: scale(2);
+}
+.wrapper:hover h1 {
+  transform: scale(0.4);
+}
+
+/* ===== Schmeckt Banner ===== */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  text-align: center;
+  background: url("../imagenes/Fondo-vaso-schmechkt.jpeg") center/cover no-repeat;
+}
+.hero-banner .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.hero-banner .content {
+  position: relative;
+  z-index: 1;
+  max-width: 550px;
+  padding: 1.8rem 1.4rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+.hero-banner .buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-banner .button {
+  padding: 0.8rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.hero-banner .button.primary {
+  background: #ffc107;
+  color: #000;
+}
+.hero-banner .button.whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+@media (max-width: 480px) {
+  .hero-banner h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+  .hero-banner p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Video ===== */
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-hero .video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-hero .video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.video-hero .video-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  animation: fadeIn 1.4s ease-out forwards;
+}
+.video-hero .video-content h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.video-hero .video-content p {
+  margin: 10px 0 20px;
+}
+.video-hero .video-content .btn-video {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 30px;
+  background: #f7931e;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.video-hero .video-content .btn-video:hover {
+  background: rgba(247, 147, 30, 0.85);
+}
+
+/* ===== Animaciones ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== Inputs sin flechas ===== */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

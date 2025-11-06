@@ -24,8 +24,8 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="rounded-circle border border-black me-2" width="60"
+                <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                    <img src="/imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="rounded-circle border border-black me-2" width="60"
                         height="50">
                     <span class="d-none d-sm-block">Schmeckt Gut</span>
                 </a>
@@ -44,48 +44,105 @@
                             <a class="nav-link" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/info.html">Acerca de</a>
+                            <a class="nav-link" href="/pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+                            <a class="nav-link" href="/pages/info.html">Nosotros</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-
-    <main class="flex-grow-1">  
-        <!-- Sección de imagen -->
-        <section class="container my-4">
-            <div class="d-flex flex-column align-items-center">
-                <img src="imagenes/cerveza-casera-3.jpg" class="rounded mb-2 img-fluid" alt="Proceso de elaboración y cervezas terminadas" loading="lazy">
-                <p class="text-center w-50">
-                    Proceso de elaboración y cervezas terminadas
-                </p>
+    <!-- ================= MAIN ================= -->
+     <!-- Estilos de cerveza -->
+    <main class="flex-grow-1">
+        <div class="container">
+            <div class="title text-center">
+                <h1 class="text-capitalize my-5">Estilos de Cervezas</h1>
             </div>
-        </section>
-
-        <!-- Sección de mapa -->
-        <section class="container my-4 col-md-8 offset-md-2">
-            <h4 class="mb-3 text-start">Aquí tenes el mapa por si queres ubicarnos</h4>
-            <div class="ratio ratio-16x9">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d64816.18665504056!2d-65.05354!3d-31.950210000000002!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDU3JzAwLjgiUyA2NcKwMDMnMTIuNyJX!5e1!3m2!1ses-419!2sar!4v1759702916163!5m2!1ses-419!2sar"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación de Schmeckt Gut en Google Maps">
-                </iframe>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/imagenes/Honey.jpg" class="img-fluid rounded-start" alt="Cerveza Honey">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">Honey: El dulzor natural en un vaso</h3>
+                            <p class="card-text">Esta cerveza de fermentación alta, tipo Ale, se caracteriza por su sabor maltoso que se combina a la perfección con la suavidad y el aroma de la miel, sin que esta sea invasiva. Predominan las notas a malta y miel, con un dulzor sutil y un amargor muy bajo, para que no opaque el sabor principal.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+        <div class="container">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/imagenes/Golden.jpg" class="img-fluid rounded-start" alt="Cerveza Golden">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">Golden: El brillo refrescante del verano</h3>
+                            <p class="card-text">La Golden Ale es una cerveza rubia, refrescante y fácil de beber que a menudo se compara con una lager, pero con más carácter. Es ideal para quienes se inician en la cerveza artesanal, pero su complejidad equilibrada sorprende a los más expertos. Ofrece un balance perfecto entre la dulzura de la malta y las notas florales o cítricas del lúpulo, con un final limpio y seco.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/imagenes/Session IPA.jpg" class="img-fluid rounded-start" alt="Cerveza Session Ipa">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">Session IPA: La versión ligera y sabrosa de la IPA</h3>
+                            <p class="card-text">Este estilo permite disfrutar del intenso aroma y sabor del lúpulo de una IPA, pero con un menor contenido de alcohol. El aroma es la estrella, con notas afrutadas, cítricas, a pino y florales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/imagenes/Porter.jpg" class="img-fluid rounded-start" alt="Cerveza Porter">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">Porter: La oscuridad con historia</h3>
+                            <p class="card-text">La Porter es una de las cervezas oscuras por excelencia, con una historia fascinante que se remonta al Londres del siglo XVIII. Nació para saciar la sed de los trabajadores portuarios (porters en inglés), que buscaban una bebida nutritiva y revitalizante. Ofrece una sinfonía de sabores a malta tostada, chocolate, café y caramelo, con un cuerpo robusto y un acabado suave.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/imagenes/Scottish.jpg" class="img-fluid rounded-start" alt="Cerveza Scottish">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">Scottish: La malta como protagonista</h3>
+                            <p class="card-text">Se enfoca en el sabor de la malta, relegando al lúpulo a un segundo plano. Las Scottish Ales se clasifican por su densidad lo que determina su nivel de alcohol y el carácter de sus sabores. El sabor maltoso es su sello distintivo, con notas a caramelo y un ligero sabor tostado. El final es rico y seco.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="bg-white text-dark py-3 mt-5">
+    <footer class="bg-white text-dark py-3">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <!-- Logo footer -->
             <div class="d-flex align-items-center mb-3 mb-md-0">
-                <img src="imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="mr-2 rounded-circle" width="100" height="85">
+                <img src="/imagenes/Logo.jpg" alt="Logo Schmeckt Gut" class="mr-2 rounded-circle" width="100" height="85">
                 <span class="ms-3 fs-5 fw-bold">Schmeckt Gut</span>
             </div>
 
@@ -97,9 +154,9 @@
             <!-- Redes sociales -->
             <div>
                 <ul class="list-unstyled d-flex gap-3 mb-0">
-                    <li><a href="#" class="text-dark text-decoration-none">Instagram</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">Facebook</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">Whatsapp</a></li>
+                    <li><a href="https://instagram.com/" class="text-dark text-decoration-none">Instagram</a></li>
+                    <li><a href="https://facebook.com/" class="text-dark text-decoration-none">Facebook</a></li>
+                    <li><a href="https://whatsapp.com/" class="text-dark text-decoration-none">Whatsapp</a></li>
                 </ul>
             </div>
         </div>
